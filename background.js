@@ -1,5 +1,5 @@
 // Gemini API configuration
-const API_KEY = 'AIzaSyAI0KROLv0Lqyvj6Wui3hBmuHvXc8TWvOs';
+const API_KEY = 'kya ree api dekhne ne aaya hai kya?';
 const API_URL = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent';
 
 // Message listener
