@@ -11,7 +11,7 @@ function loadHistory() {
     
     historyList.innerHTML = '';
     
-    // Latest 10 entries dikhao
+    // Latest 10 entries dikhao..
     history.slice(0, 10).forEach(item => {
       const div = document.createElement('div');
       div.className = 'history-item';
