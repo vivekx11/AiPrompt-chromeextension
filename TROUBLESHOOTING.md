@@ -1,4 +1,4 @@
-# 🔧 Troubleshooting Guide
+#  Troubleshooting Guide
 
 ## Button Nahi Dikh Raha? Ye Steps Follow Karo:
 
