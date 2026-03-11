@@ -1,4 +1,4 @@
-// Text select hone par logo show karna
+// Text select hone par logo show karna.
 let aiButton = null;
 let selectedText = '';
 
