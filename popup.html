@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>AI Prompt Enhancer</title>
+  <style>
+    body {
+      width: 400px;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+    }
+    
+    h1 {
+      font-size: 20px;
+      margin: 0 0 15px 0;
+      color: #333;
+    }
+    
+    .info {
+      background: #f0f4ff;
+      padding: 15px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      border-left: 4px solid #667eea;
+    }
+    
+    .info p {
+      margin: 5px 0;
+      font-size: 14px;
+      color: #555;
+    }
+    
+    .history-section {
+      margin-top: 20px;
+    }
+    
+    .history-section h2 {
+      font-size: 16px;
+      color: #333;
+      margin-bottom: 10px;
+    }
+    
+    .history-item {
+      background: #f9f9f9;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      border-left: 3px solid #764ba2;
+    }
+    
+    .history-item .timestamp {
+      font-size: 11px;
+      color: #999;
+      margin-bottom: 5px;
+    }
+    
+    .history-item .text {
+      font-size: 13px;
+      color: #333;
+      margin: 5px 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    
+    .clear-btn {
+      background: #ff4444;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      margin-top: 10px;
+    }
+    
+    .clear-btn:hover {
+      background: #cc0000;
+    }
+    
+    .no-history {
+      text-align: center;
+      color: #999;
+      padding: 20px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🤖 AI Prompt Enhancer</h1>
+  
+  <div class="info">
+    <p><strong>Kaise use karein:</strong></p>
+    <p>1. Kisi bhi website par text select karein</p>
+    <p>2. 🤖 AI button par click karein</p>
+    <p>3. Enhanced prompt milega!</p>
+  </div>
+  
+  <div class="history-section">
+    <h2>📜 Recent History</h2>
+    <div id="history-list"></div>
+    <button class="clear-btn" id="clear-history">Clear History</button>
+  </div>
+  
+  <script src="popup.js"></script>
+</body>
+</html>
