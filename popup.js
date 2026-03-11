@@ -1,4 +1,4 @@
-// History load karo
+// History load karo..
 function loadHistory() {
   chrome.storage.local.get(['promptHistory'], function(result) {
     const history = result.promptHistory || [];
