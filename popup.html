@@ -31,6 +31,66 @@
       color: #555;
     }
     
+    .api-section {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 8px;
+      margin: 15px 0;
+      border-left: 4px solid #ffc107;
+    }
+    
+    .api-section h2 {
+      font-size: 16px;
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+    
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border: 2px solid #667eea;
+      border-radius: 5px;
+      font-size: 14px;
+      box-sizing: border-box;
+      margin: 10px 0;
+    }
+    
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: bold;
+      width: 100%;
+    }
+    
+    button:hover {
+      background: #5568d3;
+    }
+    
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-size: 13px;
+      display: none;
+    }
+    
+    .status.success {
+      background: #d4edda;
+      color: #155724;
+      display: block;
+    }
+    
+    .status.error {
+      background: #f8d7da;
+      color: #721c24;
+      display: block;
+    }
+    
     .history-section {
       margin-top: 20px;
     }
@@ -85,6 +145,15 @@
       padding: 20px;
       font-size: 14px;
     }
+    
+    a {
+      color: #667eea;
+      text-decoration: none;
+    }
+    
+    a:hover {
+      text-decoration: underline;
+    }
   </style>
 </head>
 <body>
@@ -92,9 +161,17 @@
   
   <div class="info">
     <p><strong>Kaise use karein:</strong></p>
-    <p>1. Kisi bhi website par text select karein</p>
-    <p>2. 🤖 AI button par click karein</p>
-    <p>3. Enhanced prompt milega!</p>
+    <p>1. Text select karein</p>
+    <p>2. Right-click → "🤖 Enhance Prompt"</p>
+    <p>3. Ya Ctrl+Shift+E press karein</p>
+  </div>
+  
+  <div class="api-section">
+    <h2>🔑 Gemini API Key</h2>
+    <p style="font-size: 12px; color: #666;">Get your free API key from <a href="https://aistudio.google.com/app/apikey" target="_blank">Google AI Studio</a></p>
+    <input type="text" id="apiKey" placeholder="Enter your Gemini API key">
+    <button id="saveKey">Save API Key</button>
+    <div id="status" class="status"></div>
   </div>
   
   <div class="history-section">

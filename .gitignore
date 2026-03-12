@@ -1,0 +1,34 @@
+# API Keys and Secrets
+*.key
+.env
+.env.local
+
+# Test files (optional - remove if you want to include them)
+test_*.html
+debug_*.html
+simple_working_test.html
+check_models.py
+gemini_chat_tool.py
+
+# Old/backup files
+content.js
+content_v2.js
+content_final.js
+background.js
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node modules (if any)
+node_modules/
+
+# Build files
+dist/
+build/
