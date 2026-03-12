@@ -1,5 +1,5 @@
 """
-Simple icon generator for Chrome extension
+Simple icon generator for Chrome extension.
 Agar PIL/Pillow installed nahi hai to: pip install pillow
 """
 
