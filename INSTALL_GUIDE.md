@@ -1,4 +1,4 @@
-# 🚀 Installation Guide - AI Prompt Enhancer
+# 🚀 Installation Guide - AI Prompt Enhancer.
 
 ## Step-by-Step Installation
 
