@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Simple Test</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 50px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    
+    h1 {
+      color: #667eea;
+    }
+    
+    .box {
+      background: #f0f4ff;
+      padding: 30px;
+      border-radius: 10px;
+      margin: 20px 0;
+    }
+    
+    textarea {
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: 2px solid #667eea;
+      border-radius: 8px;
+      min-height: 100px;
+      box-sizing: border-box;
+    }
+    
+    .instructions {
+      background: #fff3cd;
+      padding: 15px;
+      border-radius: 5px;
+      margin: 20px 0;
+    }
+    
+    .status {
+      padding: 10px;
+      border-radius: 5px;
+      margin: 10px 0;
+      font-weight: bold;
+    }
+    
+    .success { background: #d4edda; color: #155724; }
+    .error { background: #f8d7da; color: #721c24; }
+  </style>
+</head>
+<body>
+  <h1>🤖 AI Prompt Enhancer - Simple Test</h1>
+  
+  <div class="instructions">
+    <h3>📋 Test Steps:</h3>
+    <ol>
+      <li><strong>Extension install kiya?</strong> chrome://extensions/ check karo</li>
+      <li><strong>Page refresh karo:</strong> Ctrl+R ya F5</li>
+      <li><strong>Neeche textarea mein text select karo</strong></li>
+      <li><strong>🤖 button dikhna chahiye</strong></li>
+      <li><strong>Button click karo</strong></li>
+      <li><strong>Enhanced prompt milna chahiye</strong></li>
+    </ol>
+  </div>
+  
+  <div id="status-box"></div>
+  
+  <div class="box">
+    <h2>Test Area:</h2>
+    <p>Neeche text ko select karo (Ctrl+A ya mouse drag):</p>
+    <textarea id="prompt-input" name="prompt" placeholder="Type or select text here...">mujhe ek calculator banana hai</textarea>
+  </div>
+  
+  <div class="box">
+    <h3>Console Output:</h3>
+    <div id="console" style="background: #000; color: #0f0; padding: 15px; border-radius: 5px; font-family: monospace; min-height: 150px; max-height: 300px; overflow-y: auto;">
+      <div>Waiting for extension...</div>
+    </div>
+  </div>
+  
+  <script>
+    const consoleDiv = document.getElementById('console');
+    const statusBox = document.getElementById('status-box');
+    
+    function log(msg, type = 'info') {
+      const time = new Date().toLocaleTimeString();
+      const div = document.createElement('div');
+      div.textContent = `[${time}] ${msg}`;
+      div.style.color = type === 'error' ? '#f00' : type === 'success' ? '#0f0' : '#fff';
+      consoleDiv.appendChild(div);
+      consoleDiv.scrollTop = consoleDiv.scrollHeight;
+    }
+    
+    function showStatus(msg, isSuccess) {
+      statusBox.innerHTML = `<div class="status ${isSuccess ? 'success' : 'error'}">${msg}</div>`;
+    }
+    
+    // Check if extension loaded
+    window.addEventListener('load', function() {
+      log('Page loaded');
+      
+      setTimeout(() => {
+        // Check for extension console messages
+        const originalLog = console.log;
+        console.log = function(...args) {
+          originalLog.apply(console, args);
+          const msg = args.join(' ');
+          if (msg.includes('AI Prompt Enhancer')) {
+            log('✅ Extension detected!', 'success');
+            showStatus('✅ Extension is working!', true);
+          }
+        };
+        
+        log('Waiting for text selection...');
+      }, 1000);
+    });
+    
+    // Monitor textarea
+    const textarea = document.getElementById('prompt-input');
+    
+    textarea.addEventListener('select', function() {
+      log('Text selected in textarea');
+    });
+    
+    textarea.addEventListener('input', function() {
+      log('Textarea value changed');
+    });
+    
+    // Monitor for AI button
+    const observer = new MutationObserver(function(mutations) {
+      mutations.forEach(function(mutation) {
+        mutation.addedNodes.forEach(function(node) {
+          if (node.id === 'ai-prompt-enhancer-btn') {
+            log('🤖 AI Button appeared!', 'success');
+            showStatus('✅ AI Button is visible! Click it!', true);
+          }
+          if (node.id === 'ai-loading-spinner') {
+            log('⏳ Loading spinner shown', 'success');
+          }
+        });
+      });
+    });
+    
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+    
+    log('Monitoring started...');
+  </script>
+</body>
+</html>
