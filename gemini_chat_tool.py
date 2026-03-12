@@ -2,7 +2,7 @@ import google.generativeai as genai
 import os
 
 # Gemini API configuration
-API_KEY = "are bhai api key dekh k kya karega "
+API_KEY = "are bhai api key dekh k kya karega ..."
 genai.configure(api_key=API_KEY)
 
 def generate_code_from_request(user_request):
