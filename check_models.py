@@ -1,6 +1,6 @@
 import google.generativeai as genai
 
-API_KEY = " wah ree kya soch hai teri"
+API_KEY = " wah ree kya soch hai teri...."
 genai.configure(api_key=API_KEY)
 
 print("Available Gemini Models:")
