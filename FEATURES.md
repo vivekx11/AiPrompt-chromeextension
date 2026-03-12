@@ -1,4 +1,4 @@
-# ✨ Features - AI Prompt Enhancer
+# ✨ Features - AI Prompt Enhancer.
 
 ## 🎯 Main Features
 
