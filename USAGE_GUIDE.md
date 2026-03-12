@@ -1,4 +1,4 @@
-# 📖 Usage Guide - AI Prompt Enhancer
+# 📖 Usage Guide - AI Prompt Enhancer.
 
 ## 🎯 Kaise Use Karein
 
