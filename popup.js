@@ -1,32 +1,4 @@
-// Load saved API key
-chrome.storage.local.get(['geminiApiKey'], function(result) {
-  if (result.geminiApiKey) {
-    document.getElementById('apiKey').value = result.geminiApiKey;
-  }
-});
-
-// Save API key
-document.getElementById('saveKey').addEventListener('click', function() {
-  const apiKey = document.getElementById('apiKey').value.trim();
-  const statusDiv = document.getElementById('status');
-  
-  if (!apiKey) {
-    statusDiv.className = 'status error';
-    statusDiv.textContent = '❌ Please enter an API key';
-    return;
-  }
-  
-  chrome.storage.local.set({ geminiApiKey: apiKey }, function() {
-    statusDiv.className = 'status success';
-    statusDiv.textContent = '✅ API key saved successfully!';
-    
-    setTimeout(() => {
-      statusDiv.style.display = 'none';
-    }, 3000);
-  });
-});
-
-// History load karo
+// History load karo..
 function loadHistory() {
   chrome.storage.local.get(['promptHistory'], function(result) {
     const history = result.promptHistory || [];
@@ -39,7 +11,7 @@ function loadHistory() {
     
     historyList.innerHTML = '';
     
-    // Latest 10 entries dikhao
+    // Latest 10 entries dikhao..
     history.slice(0, 10).forEach(item => {
       const div = document.createElement('div');
       div.className = 'history-item';
