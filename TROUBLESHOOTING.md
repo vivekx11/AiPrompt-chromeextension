@@ -1,6 +1,6 @@
 #  Troubleshooting Guide
 
-## Button Nahi Dikh Raha? Ye Steps Follow Karo:
+## Button Nahi Dikh Raha? Ye Steps Follow Karo:-
 
 ### Step 1: Extension Check Karo
 1. Chrome mein jao: `chrome://extensions/`
