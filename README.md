@@ -1,4 +1,5 @@
 # MAKE A PROPER PROMPT FOR YOUR CODE.
+---------------------------------------
 
 Ye ek simple chat-based tool hai jo Google Gemini AI use karke aapki request ke basis par code generate karta hai.
 
