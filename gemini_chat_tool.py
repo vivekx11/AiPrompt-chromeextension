@@ -13,7 +13,7 @@ def generate_code_from_request(user_request):
         # Gemini model initialize (latest stable model)
         model = genai.GenerativeModel('gemini-2.5-flash')
         
-        # Prompt banao jo AI ko bataye ke kya karna hai
+        # Prompt banao jo AI ko bataye ke kya karna hai wagera 
         prompt = f"""
 You are a helpful coding assistant. The user has requested: "{user_request}"
 
