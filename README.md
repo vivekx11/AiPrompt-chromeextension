@@ -2,7 +2,7 @@
 ---------------------------------------
 
 Ye ek simple chat-based tool hai jo Google Gemini AI use karke aapki request ke basis par code generate karta hai.
-
+-------------------------------------------------
 ## Features
 - Natural language mein request karein (Hindi/English)
 - AI automatically code generate karega
