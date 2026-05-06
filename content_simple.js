@@ -16,7 +16,7 @@ document.addEventListener('keydown', function(e) {
     enhanceSelectedText();
   }
 });
-
+// asyn fuction
 async function enhanceSelectedText() {
   let text = '';
   const activeElement = document.activeElement;
