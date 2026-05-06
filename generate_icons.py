@@ -44,7 +44,7 @@ try:
     
     print("\n✅ All icons created successfully!")
     print("Ab Chrome mein extension load kar sakte hain.")
-    
+# excetion    
 except ImportError:
     print("❌ Pillow library nahi mili!")
     print("\nInstall karein:")
