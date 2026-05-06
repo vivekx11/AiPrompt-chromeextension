@@ -57,7 +57,7 @@ document.addEventListener('selectionchange', function() {
     }
   }
 });
-
+// function 
 function showAIButton(x, y) {
   console.log('showAIButton called at position:', x, y);
   // Pehle se button hai to remove karo
