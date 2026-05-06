@@ -1,5 +1,5 @@
 # AI Prompt Enhancer - Chrome Extension.
-
+==========================================
 Kisi bhi website par text select karo aur AI se better prompt banao!
 
 ## Features ✨
